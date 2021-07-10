@@ -1,6 +1,8 @@
 package com.ledinhtuyenbkdn.springboottemplate.service.impl;
 
+import com.ledinhtuyenbkdn.springboottemplate.constant.ExceptionConstants;
 import com.ledinhtuyenbkdn.springboottemplate.dto.PetDTO;
+import com.ledinhtuyenbkdn.springboottemplate.exception.BusinessException;
 import com.ledinhtuyenbkdn.springboottemplate.mapper.PetMapper;
 import com.ledinhtuyenbkdn.springboottemplate.model.Pet;
 import com.ledinhtuyenbkdn.springboottemplate.repository.PetRepository;
@@ -18,7 +20,7 @@ public class PetServiceImpl implements PetService {
 
     public PetDTO getPet(Long id) {
         Pet pet = petRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Not found Pet id" + id));
+                .orElseThrow(() -> new BusinessException(ExceptionConstants.NOT_FOUND_PET));
         return petMapper.toDto(pet);
     }
 
