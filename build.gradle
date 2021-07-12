@@ -25,10 +25,12 @@ dependencies {
     implementation 'org.keycloak:keycloak-spring-boot-starter:14.0.0'
     implementation 'org.mapstruct:mapstruct:1.4.2.Final'
     compileOnly 'org.projectlombok:lombok'
+    compileOnly 'org.hibernate:hibernate-jpamodelgen:5.4.32.Final'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'mysql:mysql-connector-java'
     annotationProcessor 'org.projectlombok:lombok'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
+    annotationProcessor 'org.hibernate:hibernate-jpamodelgen:5.4.32.Final'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
 }

@@ -1,4 +1,4 @@
-package com.ledinhtuyenbkdn.springboottemplate.mapper;
+package com.ledinhtuyenbkdn.springboottemplate.service.mapper;
 
 import com.ledinhtuyenbkdn.springboottemplate.dto.PetDTO;
 import com.ledinhtuyenbkdn.springboottemplate.model.Pet;
