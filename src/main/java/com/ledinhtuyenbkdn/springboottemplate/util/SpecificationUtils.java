@@ -8,6 +8,10 @@ import javax.persistence.metamodel.SingularAttribute;
 
 public class SpecificationUtils {
 
+    private SpecificationUtils() {
+
+    }
+
     public static <E> Specification<E> buildLongSpecification(LongFilter filter, SingularAttribute<E, Long> attribute) {
         if (filter.getEquals() != null) {
             return (root, query, criteriaBuilder) -> criteriaBuilder.equal(root.get(attribute), filter.getEquals());

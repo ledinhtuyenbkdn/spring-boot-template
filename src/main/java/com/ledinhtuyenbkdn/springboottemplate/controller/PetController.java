@@ -4,6 +4,7 @@ import com.ledinhtuyenbkdn.springboottemplate.dto.PetDTO;
 import com.ledinhtuyenbkdn.springboottemplate.model.Pet;
 import com.ledinhtuyenbkdn.springboottemplate.service.PetService;
 import com.ledinhtuyenbkdn.springboottemplate.service.criteria.PetCriteria;
+import com.ledinhtuyenbkdn.springboottemplate.util.HttpHeaderUtils;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -32,9 +33,9 @@ public class PetController {
     }
 
     @GetMapping("/pets")
-    public ResponseEntity<List<PetDTO>> getAllPetS(PetCriteria criteria, Pageable pageable) {
+    public ResponseEntity<List<PetDTO>> getAllPets(PetCriteria criteria, Pageable pageable) {
         log.info("Request to get all Pet by criteria: {}", criteria);
         Page<PetDTO> pets = petService.getAllPets(criteria, pageable);
-        return ResponseEntity.ok(pets.getContent());
+        return ResponseEntity.ok().headers(HttpHeaderUtils.generatePaginationHttpHeaders(pets)).body(pets.getContent());
     }
 }
