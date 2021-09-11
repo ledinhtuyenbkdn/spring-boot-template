@@ -7,7 +7,13 @@ import org.springframework.data.domain.Pageable;
 
 public interface PetService {
 
+    PetDTO createPet(PetDTO petDTO);
+
+    PetDTO updatePet(PetDTO petDTO);
+
     PetDTO getPet(Long id);
 
     Page<PetDTO> getAllPets(PetCriteria petCriteria, Pageable pageable);
+
+    void deletePet(Long id);
 }
