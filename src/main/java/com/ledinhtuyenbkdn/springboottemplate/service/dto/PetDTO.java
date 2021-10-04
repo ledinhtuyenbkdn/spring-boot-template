@@ -1,4 +1,4 @@
-package com.ledinhtuyenbkdn.springboottemplate.dto;
+package com.ledinhtuyenbkdn.springboottemplate.service.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

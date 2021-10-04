@@ -1,6 +1,6 @@
 package com.ledinhtuyenbkdn.springboottemplate.controller;
 
-import com.ledinhtuyenbkdn.springboottemplate.dto.PetDTO;
+import com.ledinhtuyenbkdn.springboottemplate.service.dto.PetDTO;
 import com.ledinhtuyenbkdn.springboottemplate.service.PetService;
 import com.ledinhtuyenbkdn.springboottemplate.service.criteria.PetCriteria;
 import com.ledinhtuyenbkdn.springboottemplate.util.HttpHeaderUtils;
